@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="is">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styleguide.css" />
+    <title>Sækja HLJÓM-2 gögn</title>
+  </head>
+  <body>
+    <form class="login">
+      <label for="email">Netfang</label>
+      <input type="email" name="email" id="email" />
+      <label for="password">Lykilorð</label>
+      <input type="password" name="password" id="password" />
+      <button>Skrá inn</button>
+      <p class="villa"></p>
+    </form>
+    <button class="download hide">Sækja gögn</button>
+    <button class="logoutButton hide">Skrá út</button>
+    <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.17.2/firebase-firestore.js"></script>
+    <script>
+      // Your web app's Firebase configuration
+      var firebaseConfig = {
+        apiKey: "AIzaSyCQ4FF4jGAdJtHBALIp9R39wfuql_CSzsU",
+        authDomain: "mms-hljom-2-a35d6.firebaseapp.com",
+        databaseURL: "https://mms-hljom-2-a35d6.firebaseio.com",
+        projectId: "mms-hljom-2-a35d6",
+        storageBucket: "mms-hljom-2-a35d6.appspot.com",
+        messagingSenderId: "931355625585",
+        appId: "1:931355625585:web:709a47849a69830506f3d0",
+        measurementId: "G-V6SC1BHE6H",
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+
+      var auth = firebase.auth();
+      var db = firebase.firestore();
+    </script>
+    <script src="FileSaver.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
