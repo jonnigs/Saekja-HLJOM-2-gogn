@@ -153,14 +153,18 @@ document.addEventListener("DOMContentLoaded", () => {
         return data;
       })
       .then((data) => {
+        let svarlykill =
+          "Svarlykill, 0000000000, , , ,ur,ol,ur,as,ol,ol,egg,is,is,aer,egg,aer,12,3,3,3,2,4,4,2,4,8,true,true,true,true,true,true,true,true,true,true,,,,,,,,,,,10,true,false,true,true,false,true,false,true,true,false,true,true,true,true,false,15,c,d,a,d,c,d,a,d,a,d,a,c,a,d,c,b,8,true,true,true,true,true,true,true,true,true,true,10,true,true,true,true,true,true,true,true,8,71" +
+          "\r\n";
         let csvContent =
+          svarlykill +
           "nafn,kt,kyn,dagagamall,aldursbil,rim1,rim2,rim3,rim4,rim5,rim6,rim7,rim8,rim9,rim10,rim11,rim12,rimTotal,samstofur1,samstofur2,samstofur3,samstofur4,samstofur5,samstofur6,samstofur7,samstofur8,samstofurTotal,samsett1,samsett2,samsett3,samsett4,samsett5,samsett6,samsett7,samsett8,samsett9,samsett10,samsett1rangt,samsett2rangt,samsett3rangt,samsett4rangt,samsett5rangt,samsett6rangt,samsett7rangt,samsett8rangt,samsett9rangt,samsett10rangt,samsettTotal,hljodgreining1,hljodgreining2,hljodgreining3,hljodgreining4,hljodgreining5,hljodgreining6,hljodgreining7,hljodgreining8,hljodgreining9,hljodgreining10,hljodgreining11,hljodgreining12,hljodgreining13,hljodgreining14,hljodgreining15,hljodgreiningTotal,margraed11,margraed12,margraed21,margraed22,margraed31,margraed32,margraed41,margraed42,margraed51,margraed52,margraed61,margraed62,margraed71,margraed72,margraed81,margraed82,margraedTotal,ordhle1,ordhle2,ordhle3,ordhle4,ordhle5,ordhle6,ordhle7,ordhle8,ordhle9,ordhle10,ordhleTotal,hljodtenging1,hljodtenging2,hljodtenging3,hljodtenging4,hljodtenging5,hljodtenging6,hljodtenging7,hljodtenging8,hljodtengingTotal,total" +
           "\r\n";
         data.forEach(function (rowArray) {
           let row = rowArray.join(",");
           csvContent += row + "\r\n";
         });
-        const filename = "test.csv";
+        const filename = "hljom-2-gogn.csv";
         const blob = new Blob([csvContent], {
           type: "text/csv;charset=utf-8",
         });
